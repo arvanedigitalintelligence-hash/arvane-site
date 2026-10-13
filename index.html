@@ -1,0 +1,655 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>ARVANE Digital Intelligence | Sites, Sistemas, Apps e Automação</title>
+<meta name="description" content="A ARVANE Digital Intelligence cria sites profissionais, sistemas sob medida, aplicativos, automação com IA no WhatsApp e presença no Google para empresas que querem crescer.">
+<link rel="canonical" href="https://www.arvanedigitalintelligence.com/">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="ARVANE Digital Intelligence">
+<meta property="og:title" content="ARVANE Digital Intelligence">
+<meta property="og:description" content="Transformamos presença digital em resultados: sites, sistemas, apps, automação e Google.">
+<meta property="og:url" content="https://www.arvanedigitalintelligence.com/">
+<meta property="og:image" content="https://www.arvanedigitalintelligence.com/media/og.jpg">
+<meta name="theme-color" content="#070B16">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><path fill='%233D8BFF' fill-rule='evenodd' d='M0 100 L39.7 0 L54 0 L81 53.5 L19 100 Z M57.1 20.5 L22 82 L68 52 Z'/><polygon fill='%23B04DFF' points='63.5,74.8 82.5,60.5 100,100 84,100 76.5,76.5'/></svg>">
+<style>body{margin:0}img{max-width:100%}[hidden]{display:none!important}</style>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Michroma&family=Bricolage+Grotesque:opsz,wght@12..96,400;12..96,600;12..96,800&family=Instrument+Sans:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap">
+<style>
+/* Layout: canvas 3D atrás do hero, seções em faixa única com grid assimétrico; visual escuro deliberado, tema único */
+:root{
+  --ink:#070B16;        /* fundo */
+  --deep:#0E1528;       /* superfícies */
+  --line:#1F2A44;       /* divisórias */
+  --fog:#8C9AB8;        /* texto secundário (cinza azulado) */
+  --paper:#EEF1F8;      /* texto principal */
+  --signal:#3D8BFF;     /* azul da logo */
+  --ember:#B04DFF;      /* roxo da logo, uso pontual */
+  --cyan:#35D6FF;       /* ciano do "Digital Intelligence" */
+  --f-display:"Bricolage Grotesque", "Segoe UI", system-ui, sans-serif;
+  --f-body:"Instrument Sans", "Segoe UI", system-ui, sans-serif;
+  --f-mono:"JetBrains Mono", ui-monospace, Menlo, monospace;
+  color-scheme:dark;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{background:var(--ink);color:var(--paper);font-family:var(--f-body);font-size:17px;line-height:1.6;overflow-x:hidden}
+a{color:inherit}
+.wrap{max-width:1180px;margin-inline:auto;padding-inline:clamp(16px,4vw,40px)}
+h1,h2,h3{font-family:var(--f-display);line-height:1.05;text-wrap:balance;margin:0;letter-spacing:-.02em}
+p{margin:0}
+.eyebrow{font-family:var(--f-mono);font-size:12px;letter-spacing:.14em;text-transform:uppercase;color:var(--signal)}
+:focus-visible{outline:2px solid var(--ember);outline-offset:3px;border-radius:4px}
+
+/* NAV */
+.nav{position:sticky;top:env(safe-area-inset-top,0px);z-index:20;background:color-mix(in srgb,var(--ink) 78%,transparent);backdrop-filter:blur(14px);border-bottom:1px solid var(--line)}
+.nav .wrap{display:flex;align-items:center;justify-content:space-between;gap:16px;padding-block:14px}
+.brand{display:flex;align-items:center;gap:10px;text-decoration:none;font-family:Michroma,var(--f-display);font-weight:400;letter-spacing:.14em;font-size:15px}
+.brand small{display:block;font-family:var(--f-mono);font-weight:400;font-size:10px;letter-spacing:.2em;color:var(--fog)}
+.mark{width:34px;height:30px;display:block;filter:drop-shadow(0 0 8px rgba(61,139,255,.55))}
+.brand small{background:linear-gradient(90deg,var(--cyan),var(--signal),var(--ember));-webkit-background-clip:text;background-clip:text;color:transparent}
+.links{display:flex;gap:26px;font-size:14px;color:var(--fog)}
+.links a{text-decoration:none}.links a:hover{color:var(--paper)}
+.btn{display:inline-flex;align-items:center;gap:10px;padding:13px 22px;border-radius:999px;text-decoration:none;font-weight:600;font-size:15px;border:1px solid var(--line);transition:transform .2s,background .2s,border-color .2s}
+.btn:hover{transform:translateY(-2px);border-color:var(--signal)}
+.btn.primary{background:var(--signal);border-color:var(--signal);color:#06102A}
+.btn.primary:hover{background:#7AA2FF}
+.btn.sm{padding:9px 16px;font-size:14px}
+@media (max-width:820px){.links{display:none}}
+
+/* HERO */
+.hero{position:relative;overflow:hidden;border-bottom:1px solid var(--line)}
+#scene{position:absolute;inset:0;width:100%;height:100%;display:block}
+.hero::after{content:"";position:absolute;inset:0;background:linear-gradient(90deg,var(--ink) 18%,transparent 70%);pointer-events:none}
+.hero .wrap{position:relative;z-index:2;padding-block:clamp(72px,12vw,150px)}
+.hero h1{font-size:clamp(42px,7.4vw,96px);font-weight:800;max-width:11ch}
+.hero h1 em{font-style:normal;color:var(--signal)}
+.hero .lead{margin-top:24px;max-width:46ch;font-size:clamp(17px,1.6vw,20px);color:var(--fog)}
+.cta-row{display:flex;flex-wrap:wrap;gap:12px;margin-top:36px}
+.coords{margin-top:56px;display:flex;flex-wrap:wrap;gap:28px;font-family:var(--f-mono);font-size:12px;color:var(--fog);letter-spacing:.08em}
+.coords b{color:var(--paper);font-weight:500}
+@media (max-width:700px){.hero::after{background:linear-gradient(180deg,transparent 0%,var(--ink) 92%)}}
+
+section{padding-block:clamp(72px,10vw,128px)}
+.head{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1.2fr);gap:32px 64px;align-items:end;margin-bottom:56px}
+.head h2{font-size:clamp(32px,4.6vw,56px);font-weight:800}
+.head p{color:var(--fog);max-width:52ch}
+@media (max-width:820px){.head{grid-template-columns:1fr}}
+
+/* PILARES */
+.pillars{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));border-top:1px solid var(--line)}
+.pillar{padding:32px 28px 8px 0;display:grid;gap:12px}
+.pillar+.pillar{padding-left:28px;border-left:1px solid var(--line)}
+.pillar h3{font-size:22px;font-weight:600}
+.pillar p{color:var(--fog);font-size:16px}
+@media (max-width:820px){.pillars{grid-template-columns:1fr}.pillar+.pillar{padding-left:0;border-left:0;border-top:1px solid var(--line)}}
+
+/* SERVIÇOS */
+.services{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:1px;background:var(--line);border:1px solid var(--line);border-radius:18px;overflow:hidden}
+.svc{background:var(--deep);padding:30px 28px 34px;display:grid;gap:10px;align-content:start;transition:background .25s}
+.svc:hover{background:#121C36}
+.svc .tag{font-family:var(--f-mono);font-size:11px;color:var(--fog);letter-spacing:.12em}
+.svc h3{font-size:21px;font-weight:600}
+.svc p{color:var(--fog);font-size:15.5px}
+@media (max-width:900px){.services{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media (max-width:560px){.services{grid-template-columns:1fr}}
+
+/* HISTÓRIA COM ROLAGEM */
+.story{border-block:1px solid var(--line);background:radial-gradient(70% 60% at 75% 40%,#101C3D 0%,var(--ink) 70%)}
+.story .wrap{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1.15fr);gap:48px}
+.story{padding-bottom:0}
+.story-head{max-width:1180px;margin-inline:auto;padding-inline:clamp(16px,4vw,40px);display:grid;justify-items:center;text-align:center;gap:16px;padding-bottom:24px}
+.story-head h2{font-size:clamp(40px,7vw,92px);font-weight:800;background:linear-gradient(90deg,var(--cyan),var(--signal) 50%,var(--ember));-webkit-background-clip:text;background-clip:text;color:transparent;padding-bottom:.08em}
+.scroll-cue{width:26px;height:42px;border:1.5px solid var(--fog);border-radius:14px;display:flex;justify-content:center;padding-top:7px}
+.scroll-cue i{width:4px;height:8px;border-radius:2px;background:var(--paper);animation:cue 1.6s infinite}
+@keyframes cue{0%{transform:translateY(0)}70%{transform:translateY(14px)}100%{transform:translateY(0)}}
+.chapters{display:grid}
+.chapter{min-height:78vh;display:grid;align-content:center;gap:14px;padding-block:24px;opacity:.38;transition:opacity .5s}
+.chapter.on{opacity:1}
+.chapter:first-child{min-height:60vh}
+.chapter .n{font-family:var(--f-mono);font-size:12px;letter-spacing:.14em;color:var(--ember)}
+.chapter h3{font-size:clamp(28px,3.6vw,46px);font-weight:800}
+.chapter p{color:var(--fog);max-width:40ch}
+.stage{position:sticky;top:calc(env(safe-area-inset-top,0px) + 90px);height:calc(100vh - 140px);align-self:start}
+#morph{width:100%;height:100%;display:block}
+.meter{position:absolute;left:0;right:0;bottom:8px;display:flex;gap:6px}
+.meter i{flex:1;height:2px;background:var(--line);overflow:hidden;position:relative}
+.meter i b{position:absolute;inset:0;background:var(--signal);transform-origin:left;transform:scaleX(0)}
+@media (max-width:820px){
+  .story .wrap{grid-template-columns:1fr;gap:0}
+  .stage{order:-1;top:calc(env(safe-area-inset-top,0px) + 62px);height:44vh;z-index:1;background:var(--ink);border-bottom:1px solid var(--line)}
+  .chapter{min-height:64vh;opacity:.5}
+}
+@media (prefers-reduced-motion:reduce){.chapter{opacity:1}}
+
+/* VÍDEOS */
+.videos{background:var(--deep);border-block:1px solid var(--line)}
+.vgrid{display:grid;grid-template-columns:1fr 1fr 1.1fr;gap:20px;align-items:start}
+.quero{align-self:stretch}
+.qbox{height:100%;border:1px solid var(--line);border-radius:20px;padding:32px 28px;display:grid;align-content:center;gap:18px;background:radial-gradient(100% 70% at 50% 0%,#1B2E6E 0%,var(--ink) 75%)}
+.qbox h3{font-size:clamp(24px,2.4vw,32px);font-weight:800}
+.qbox .btn{justify-self:start;font-size:18px;letter-spacing:.06em}
+.vcard{display:grid;gap:14px;min-width:0}
+.frame{position:relative;aspect-ratio:9/16;max-width:100%;border-radius:20px;overflow:hidden;border:1px solid var(--line);background:radial-gradient(120% 80% at 50% 0%,#1A2A55 0%,var(--ink) 70%)}
+.frame video{width:100%;height:100%;object-fit:cover;display:block}
+.ph{position:absolute;inset:0;display:grid;place-items:center;align-content:center;gap:14px;text-align:center;padding:24px;color:var(--fog);font-size:14px}
+.ph .ring{width:64px;height:64px;border-radius:50%;border:1.5px solid var(--signal);display:grid;place-items:center}
+.ph .ring::before{content:"";border-left:16px solid var(--paper);border-block:10px solid transparent;margin-left:5px}
+.vcard h3{font-size:18px;font-weight:600}
+.vcard p{color:var(--fog);font-size:14.5px}
+@media (max-width:900px){.vgrid{grid-template-columns:repeat(2,minmax(0,1fr))}.quero{grid-column:1/-1}}
+@media (max-width:560px){.vgrid{grid-template-columns:1fr}}
+
+/* PORTFÓLIO */
+.work{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:20px}
+.case{border:1px solid var(--line);border-radius:18px;overflow:hidden;background:var(--deep);display:grid}
+.case canvas{width:100%;aspect-ratio:4/3;display:block;max-width:100%}
+.case div{padding:20px 22px 24px;display:grid;gap:6px}
+.case h3{font-size:18px;font-weight:600}
+.case.feature{grid-column:1/-1;grid-template-columns:minmax(0,1.2fr) minmax(0,1fr);align-items:center}
+.case.feature canvas{aspect-ratio:16/10;height:100%;object-fit:cover}
+.case.feature div{padding:32px;gap:12px}
+.case.feature h3{font-size:clamp(24px,2.6vw,34px);font-weight:800}
+.case.feature p{font-size:16.5px;max-width:42ch}
+.case.feature div::before{content:"Destaque · Sistemas sob medida";font-family:var(--f-mono);font-size:11px;letter-spacing:.14em;text-transform:uppercase;color:var(--cyan)}
+@media (max-width:700px){.case.feature{grid-template-columns:1fr}}
+.case p{color:var(--fog);font-size:15px}
+@media (max-width:900px){.work{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media (max-width:560px){.work{grid-template-columns:1fr}}
+.center{display:flex;justify-content:center;margin-top:44px}
+
+/* PROCESSO */
+.steps{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:20px;counter-reset:s}
+.step{border-top:2px solid var(--signal);padding-top:22px;display:grid;gap:10px}
+.step .n{font-family:var(--f-mono);font-size:13px;color:var(--ember)}
+.step h3{font-size:22px;font-weight:600}
+.step p{color:var(--fog);font-size:15.5px}
+@media (max-width:820px){.steps{grid-template-columns:1fr}}
+
+/* MANIFESTO */
+.manifesto{display:grid;grid-template-columns:minmax(0,1.1fr) minmax(0,1fr);gap:48px;align-items:center}
+.manifesto h2{font-size:clamp(30px,4vw,48px);font-weight:800}
+.manifesto .txt{display:grid;gap:18px;color:var(--fog)}
+.badge{display:inline-flex;gap:8px;align-items:center;font-family:var(--f-mono);font-size:12px;letter-spacing:.1em;color:var(--paper);border:1px solid var(--line);padding:8px 14px;border-radius:999px;width:max-content;max-width:100%}
+.badge i{width:7px;height:7px;border-radius:50%;background:var(--ember)}
+@media (max-width:820px){.manifesto{grid-template-columns:1fr}}
+
+/* CTA FINAL */
+.final{text-align:left;border:1px solid var(--line);border-radius:28px;padding:clamp(32px,6vw,72px);background:radial-gradient(90% 120% at 100% 0%,#18306E 0%,var(--deep) 55%);display:grid;gap:22px}
+.final h2{font-size:clamp(34px,5vw,64px);font-weight:800;max-width:16ch}
+.final p{color:var(--fog);max-width:56ch}
+.phone{font-family:var(--f-mono);font-size:15px;color:var(--paper);user-select:all}
+
+footer{border-top:1px solid var(--line);padding-block:48px;color:var(--fog);font-size:14px}
+footer .wrap{display:grid;grid-template-columns:1.4fr 1fr 1fr;gap:32px}
+footer h4{margin:0 0 10px;font-family:var(--f-mono);font-size:11px;letter-spacing:.16em;text-transform:uppercase;color:var(--paper);font-weight:500}
+footer ul{list-style:none;margin:0;padding:0;display:grid;gap:6px}
+footer .copy{grid-column:1/-1;border-top:1px solid var(--line);padding-top:20px;font-size:13px}
+@media (max-width:700px){footer .wrap{grid-template-columns:1fr}}
+
+.reveal{transform:translateY(14px);transition:transform .8s cubic-bezier(.2,.7,.2,1)}
+.reveal.in{transform:none}
+@media (prefers-reduced-motion:reduce){*{transition:none!important;scroll-behavior:auto}.reveal{transform:none}}
+</style>
+</head>
+<body>
+
+
+<nav class="nav" aria-label="Principal">
+  <div class="wrap">
+    <a class="brand" href="#topo"><svg class="mark" viewBox="0 0 100 100" aria-hidden="true"><defs><linearGradient id="ga" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#45C8FF"/><stop offset="1" stop-color="#2D55FF"/></linearGradient><linearGradient id="gb" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#5A5BFF"/><stop offset="1" stop-color="#C44DFF"/></linearGradient></defs><path fill="url(#ga)" fill-rule="evenodd" d="M0 100 L39.7 0 L54 0 L81 53.5 L19 100 Z M57.1 20.5 L22 82 L68 52 Z"/><polygon fill="url(#gb)" points="63.5,74.8 82.5,60.5 100,100 84,100 76.5,76.5"/></svg><span>ARVANE<small>DIGITAL INTELLIGENCE</small></span></a>
+    <div class="links">
+      <a href="#servicos">Serviços</a><a href="#jornada">Jornada</a><a href="#videos">Vídeos</a><a href="#projetos">Projetos</a><a href="#processo">Como trabalhamos</a>
+    </div>
+    <a class="btn primary sm" href="https://wa.me/5519991826697?text=Ol%C3%A1%2C%20vim%20pelo%20site%20da%20ARVANE%20Digital%20Intelligence." target="_blank" rel="noopener">Falar com a Arvane</a>
+  </div>
+</nav>
+
+<header class="hero" id="topo">
+  <canvas id="scene" aria-hidden="true"></canvas>
+  <div class="wrap">
+    <p class="eyebrow">Brasil · Digital Intelligence</p>
+    <h1 style="margin-top:18px">Transformamos presença digital em <em>resultados.</em></h1>
+    <p class="lead">Estratégia, tecnologia e inteligência para construir uma presença digital que gera credibilidade e crescimento real para a sua empresa.</p>
+    <div class="cta-row">
+      <a class="btn primary" href="https://wa.me/5519991826697?text=Ol%C3%A1%2C%20gostaria%20de%20solicitar%20um%20or%C3%A7amento%20com%20a%20ARVANE%20Digital%20Intelligence." target="_blank" rel="noopener">Solicitar orçamento →</a>
+      <a class="btn" href="#servicos">Conheça nossas soluções</a>
+    </div>
+    <div class="coords">
+      <span><b>Sites</b> sob medida</span><span><b>Apps</b> Android e iPhone</span><span><b>Sistemas</b> para empresas</span><span><b>Automação</b> e IA</span><span><b>Google</b> Meu Negócio</span>
+    </div>
+  </div>
+</header>
+
+<main>
+<section id="por-que">
+  <div class="wrap">
+    <div class="head reveal">
+      <div><p class="eyebrow">Por que investir</p><h2 style="margin-top:14px">Sua marca merece uma plataforma exclusiva.</h2></div>
+      <p>Hoje a credibilidade de uma empresa é validada pela presença digital. Um site profissional de alto padrão consolida sua autoridade, amplia seu alcance e converte mais clientes qualificados.</p>
+    </div>
+    <div class="pillars reveal">
+      <div class="pillar"><h3>Autoridade de marca</h3><p>Posicione sua empresa com sofisticação e transmita confiança total para o seu público.</p></div>
+      <div class="pillar"><h3>Expansão estratégica</h3><p>Seja encontrado no Google com um endereço oficial e domine as buscas do seu nicho.</p></div>
+      <div class="pillar"><h3>Alta performance</h3><p>Transforme visitantes em clientes fiéis com uma estrutura pensada para crescer.</p></div>
+    </div>
+  </div>
+</section>
+
+<section id="servicos" style="padding-top:0">
+  <div class="wrap">
+    <div class="head reveal">
+      <div><p class="eyebrow">Soluções</p><h2 style="margin-top:14px">Muito além de um site.</h2></div>
+      <p>Uma estrutura sob medida para dominar o Google e elevar sua marca, unindo tecnologia e estratégia para gerar novos negócios todos os dias.</p>
+    </div>
+    <div class="services reveal">
+      <article class="svc"><span class="tag">WEB</span><h3>Site profissional</h3><p>Desenvolvimento moderno e responsivo, desenhado para a identidade da sua marca.</p></article>
+      <article class="svc"><span class="tag">SISTEMAS</span><h3>Sistemas sob medida</h3><p>Controle de estoque, agendamento e gestão feitos para a rotina da sua empresa.</p></article>
+      <article class="svc"><span class="tag">APP</span><h3>Criação de app</h3><p>Aplicativos para Android e iPhone que colocam sua empresa no bolso do cliente.</p></article>
+      <article class="svc"><span class="tag">IA</span><h3>Automação e IA</h3><p>Atendimento automático no WhatsApp e fluxos inteligentes que agilizam a operação.</p></article>
+      <article class="svc"><span class="tag">MAPS</span><h3>Presença no Google</h3><p>Criação e otimização completa do Google Meu Negócio para aparecer no Maps e na busca.</p></article>
+      <article class="svc"><span class="tag">SEO</span><h3>Palavras-chave</h3><p>Análise estratégica para máxima relevância no seu nicho e impulsionamento nas buscas.</p></article>
+      <article class="svc"><span class="tag">TRÁFEGO</span><h3>Suporte em tráfego</h3><p>Consultoria tática para guiar a visibilidade da sua marca e o retorno dos anúncios.</p></article>
+      <article class="svc"><span class="tag">CÓDIGO</span><h3>Implementações técnicas</h3><p>Integrações e códigos personalizados para alto desempenho do seu negócio.</p></article>
+    </div>
+  </div>
+</section>
+
+<section id="jornada" class="story" aria-label="Da ideia ao resultado">
+  <div class="story-head">
+    <p class="eyebrow">Role a página e acompanhe</p>
+    <h2>Da ideia ao resultado.</h2>
+    <span class="scroll-cue" aria-hidden="true"><i></i></span>
+  </div>
+  <div class="wrap">
+    <div class="chapters">
+      <div class="chapter on"><span class="n">01 · A IDEIA</span><h3>Tudo começa com o seu negócio.</h3><p>Entendemos sua empresa, seu público e onde estão as oportunidades que hoje passam despercebidas.</p></div>
+      <div class="chapter"><span class="n">02 · O SITE</span><h3>Uma plataforma feita sob medida.</h3><p>Design exclusivo e tecnologia de ponta reunidos em um site rápido, bonito e pronto para converter.</p></div>
+      <div class="chapter"><span class="n">03 · O GOOGLE</span><h3>Sua empresa no mapa.</h3><p>Google Meu Negócio otimizado e palavras-chave estratégicas para você ser encontrado por quem está procurando.</p></div>
+      <div class="chapter"><span class="n">04 · O RESULTADO</span><h3>Mais clientes, todos os dias.</h3><p>Presença digital trabalhando por você 24 horas, com automações que atendem e vendem enquanto você foca no negócio.</p></div>
+    </div>
+    <div class="stage">
+      <canvas id="morph" aria-hidden="true"></canvas>
+      <div class="meter" aria-hidden="true"><i><b></b></i><i><b></b></i><i><b></b></i></div>
+    </div>
+  </div>
+</section>
+
+<section id="videos" class="videos">
+  <div class="wrap">
+    <div class="head reveal">
+      <div><p class="eyebrow">Arvane em vídeo</p><h2 style="margin-top:14px">Conheça quem está por trás dos projetos.</h2></div>
+      <p>Matheus Araújo mostra, em menos de um minuto, como a Arvane resolve problemas reais de negócios locais.</p>
+    </div>
+    <div class="vgrid" id="vgrid"></div>
+  </div>
+</section>
+
+<section id="projetos">
+  <div class="wrap">
+    <div class="head reveal">
+      <div><p class="eyebrow">Portfólio</p><h2 style="margin-top:14px">Engenharia de alto nível.</h2></div>
+      <p>Soluções estratégicas e sites profissionais desenvolvidos para gerar resultados reais em diferentes segmentos.</p>
+    </div>
+    <div class="work" id="work"></div>
+    <div class="center"><a class="btn" href="https://www.instagram.com/arvane.digital/" target="_blank" rel="noopener">Veja mais projetos no Instagram ↗</a></div>
+  </div>
+</section>
+
+<section id="processo" style="padding-top:0">
+  <div class="wrap">
+    <div class="head reveal">
+      <div><p class="eyebrow">Como trabalhamos</p><h2 style="margin-top:14px">A jornada para o seu posicionamento digital.</h2></div>
+      <p>Três etapas claras, do primeiro contato até a plataforma no ar.</p>
+    </div>
+    <div class="steps reveal">
+      <div class="step"><span class="n">ETAPA 01</span><h3>Consultoria inicial</h3><p>Conversamos para alinhar os objetivos estratégicos do projeto.</p></div>
+      <div class="step"><span class="n">ETAPA 02</span><h3>Planejamento e design</h3><p>Estruturamos cada detalhe com base em dados e na identidade visual da marca.</p></div>
+      <div class="step"><span class="n">ETAPA 03</span><h3>Implementação</h3><p>Entregamos uma plataforma robusta, pronta para escalar o seu negócio.</p></div>
+    </div>
+  </div>
+</section>
+
+<section style="padding-top:0">
+  <div class="wrap manifesto reveal">
+    <h2>Projetos exclusivos exigem atenção aos mínimos detalhes.</h2>
+    <div class="txt">
+      <p>A ARVANE Digital Intelligence une ciência de dados e design de alto padrão para construir a autoridade da sua marca. Nosso compromisso é entregar uma ferramenta estratégica que gera valor e resultados concretos.</p>
+      <p>Por isso trabalhamos com atendimento consultivo e limitamos o número de projetos simultâneos, garantindo excelência em cada entrega.</p>
+      <span class="badge"><i></i>Parceiro oficial da Wix</span>
+    </div>
+  </div>
+</section>
+
+<section style="padding-top:0">
+  <div class="wrap">
+    <div class="final reveal">
+      <p class="eyebrow">Próximo passo</p>
+      <h2>Pronto para levar sua presença digital a outro nível?</h2>
+      <p>Fale agora com um especialista da ARVANE pelo WhatsApp e comece a desenhar o próximo passo da sua empresa.</p>
+      <div class="cta-row" style="margin-top:6px;align-items:center">
+        <a class="btn primary" href="https://wa.me/5519991826697?text=Ol%C3%A1%2C%20quero%20uma%20solu%C3%A7%C3%A3o%20digital%20para%20minha%20empresa." target="_blank" rel="noopener">Falar no WhatsApp →</a>
+        <span class="phone">+55 (19) 99182-6697</span><span class="phone">arvanedigitalintelligence@gmail.com</span>
+      </div>
+    </div>
+  </div>
+</section>
+</main>
+
+<footer>
+  <div class="wrap">
+    <div><a class="brand" href="#topo"><svg class="mark" viewBox="0 0 100 100" aria-hidden="true"><defs><linearGradient id="ga" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#45C8FF"/><stop offset="1" stop-color="#2D55FF"/></linearGradient><linearGradient id="gb" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#5A5BFF"/><stop offset="1" stop-color="#C44DFF"/></linearGradient></defs><path fill="url(#ga)" fill-rule="evenodd" d="M0 100 L39.7 0 L54 0 L81 53.5 L19 100 Z M57.1 20.5 L22 82 L68 52 Z"/><polygon fill="url(#gb)" points="63.5,74.8 82.5,60.5 100,100 84,100 76.5,76.5"/></svg><span>ARVANE<small>ESTRATÉGIA · INTELIGÊNCIA · DIGITAL</small></span></a></div>
+    <div><h4>Contato</h4><ul><li>arvanedigitalintelligence@gmail.com</li><li>+55 (19) 99182-6697</li><li>São Paulo, Brasil</li></ul></div>
+    <div><h4>Links</h4><ul><li><a href="https://www.instagram.com/arvane.digital/" target="_blank" rel="noopener">Instagram @arvane.digital</a></li><li>Política de Privacidade</li><li>Termos de Uso</li></ul></div>
+    <p class="copy">© 2026 ARVANE Digital Intelligence. Todos os direitos reservados.</p>
+  </div>
+</footer>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+<script>
+/* ---------- VÍDEOS DO AVATAR: preencher "src" com o arquivo de cada vídeo ---------- */
+const VIDEOS = [
+  {src:"media/dinheiro-invisivel.mp4", poster:"media/dinheiro-invisivel.jpg", title:"O dinheiro invisível", text:"Quantos clientes sua empresa perde sem saber? Google, site e IA que responde na hora."},
+  {src:"media/agro-sistema.mp4", poster:"media/agro-sistema.jpg", title:"Sistema para o agro", text:"Controle de estoque de peças e insumos no celular, simples e feito para a realidade do campo."}
+];
+const vg=document.getElementById('vgrid');
+VIDEOS.forEach(v=>{
+  const c=document.createElement('article');c.className='vcard';
+  c.innerHTML=`<div class="frame"><video src="${v.src}" poster="${v.poster}" muted loop playsinline controls preload="metadata"></video></div><h3>${v.title}</h3><p>${v.text}</p>`;
+  vg.appendChild(c);
+});
+// card de chamada ao lado dos vídeos
+const q=document.createElement('article');q.className='vcard quero';
+q.innerHTML=`<div class="qbox"><p class="eyebrow">Seja sincero</p><h3>Quantos clientes você perdeu este mês sem saber?</h3><p>Perfil no Google bem feito, site que passa confiança e IA que responde na hora. A Arvane monta tudo isso para você.</p><a class="btn primary" href="https://wa.me/5519991826697?text=QUERO%20parar%20de%20perder%20clientes." target="_blank" rel="noopener">QUERO →</a></div>`;
+vg.appendChild(q);
+// vídeos tocam sem som quando aparecem na tela e pausam ao sair
+try{
+  const vio=new IntersectionObserver(es=>es.forEach(e=>{const v=e.target;if(e.isIntersecting){if(!matchMedia('(prefers-reduced-motion: reduce)').matches)v.play().catch(()=>{})}else v.pause()}),{threshold:.5});
+  vg.querySelectorAll('video').forEach(v=>vio.observe(v));
+}catch(e){}
+
+/* ---------- PORTFÓLIO: capas geradas por segmento ---------- */
+const CASES=[
+  ["Agronegócio","Sistema de controle de estoque de peças e insumos para o campo, direto no celular, simples e feito para a rotina de quem é do agro.",100,true],
+  ["Clínica odontológica","Estética minimalista e funcional, focada em saúde e alta tecnologia.",210],
+  ["Setores técnicos","Ambiente digital dinâmico para serviços de performance especializada.",28],
+  ["Clínica de estética","Visual refinado e layouts sofisticados para o público de alto valor.",330],
+  ["Energia solar","Inovação visual aplicada à tecnologia sustentável de ponta a ponta.",45],
+  ["Serviços premium","Interface exclusiva para uma jornada do cliente marcante.",260],
+  ["Gastronomia","Refinamento visual que desperta o desejo e consolida a marca.",12]
+];
+const wk=document.getElementById('work');
+CASES.forEach(([t,d,h,feat],i)=>{
+  const a=document.createElement('article');a.className='case reveal'+(feat?' feature':'');
+  const cv=document.createElement('canvas');cv.width=640;cv.height=480;
+  if(feat){a.dataset.tag='Destaque'}
+  const x=cv.getContext('2d');
+  const g=x.createLinearGradient(0,0,640,480);
+  g.addColorStop(0,`hsl(${h} 55% 22%)`);g.addColorStop(1,'#070B16');
+  x.fillStyle=g;x.fillRect(0,0,640,480);
+  x.strokeStyle=`hsla(${h} 90% 70% / .35)`;x.lineWidth=1;
+  for(let k=0;k<14;k++){x.beginPath();x.arc(470,150,30+k*22,0,Math.PI*2);x.stroke();}
+  x.fillStyle='rgba(238,241,248,.9)';x.fillRect(48,330,180,10);
+  x.fillStyle='rgba(238,241,248,.35)';x.fillRect(48,356,260,6);x.fillRect(48,372,220,6);
+  x.fillStyle=`hsl(${h} 90% 68%)`;x.fillRect(48,400,90,26);
+  x.font='500 15px "JetBrains Mono", monospace';x.fillStyle='rgba(238,241,248,.55)';
+  x.fillText(String(i+1).padStart(2,'0')+' / '+t.toUpperCase(),48,60);
+  a.appendChild(cv);
+  const b=document.createElement('div');b.innerHTML=`<h3>${t}</h3><p>${d}</p>`;a.appendChild(b);
+  wk.appendChild(a);
+});
+
+/* ---------- Aparecimento suave ---------- */
+try{
+  const io=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target)}}),{threshold:.12});
+  document.querySelectorAll('.reveal').forEach(el=>io.observe(el));
+}catch(e){document.querySelectorAll('.reveal').forEach(el=>el.classList.add('in'))}
+
+/* ---------- Cena 3D: núcleo de inteligência ---------- */
+(function(){
+  if(!window.THREE) return;
+  const canvas=document.getElementById('scene');
+  const reduce=matchMedia('(prefers-reduced-motion: reduce)').matches;
+  let renderer;
+  try{renderer=new THREE.WebGLRenderer({canvas,antialias:true,alpha:true});}catch(e){return}
+  renderer.setPixelRatio(Math.min(devicePixelRatio,2));
+  const scene=new THREE.Scene();
+  const cam=new THREE.PerspectiveCamera(42,1,.1,100);cam.position.set(0,0,9);
+
+  const group=new THREE.Group();scene.add(group);
+  // ---- logo ARVANE em 3D (peça extrudada) ----
+  const S=2.9; // tamanho do "A"
+  const P=([x,y])=>new THREE.Vector2((x-.5)*S*1.22,(y-.5)*S);
+  function shape(pts,hole){const s=new THREE.Shape(pts.map(P));if(hole)s.holes.push(new THREE.Path(hole.map(P)));return s}
+  const ext={depth:.4,bevelEnabled:true,bevelThickness:.05,bevelSize:.03,bevelSegments:3};
+  // traçado da logo: corpo azul com vazado triangular e barra diagonal; perna roxa separada
+  const gMain=new THREE.ExtrudeGeometry(shape(
+    [[0,0],[.397,1],[.54,1],[.81,.465],[.19,0]],
+    [[.22,.18],[.571,.795],[.68,.48]]),ext);
+  const gLeg=new THREE.ExtrudeGeometry(shape([[.635,.252],[.825,.395],[1,0],[.84,0],[.765,.235]]),ext);
+  // degradês: corpo ciano → azul; perna azul-violeta → roxo
+  const cc=new THREE.Color();
+  function paint(g,a,b,dir){
+    g.translate(0,0,-.2);
+    const p=g.attributes.position,col=[];
+    for(let i=0;i<p.count;i++){
+      const nx=p.getX(i)/(S*1.22)+.5,ny=p.getY(i)/S+.5;
+      const t=Math.min(1,Math.max(0,dir(nx,ny)));
+      cc.set(a).lerp(new THREE.Color(b),t);col.push(cc.r,cc.g,cc.b);
+    }
+    g.setAttribute('color',new THREE.Float32BufferAttribute(col,3));
+  }
+  paint(gMain,0x45C8FF,0x2D55FF,(x,y)=>x*.9+(1-y)*.35-.1);
+  paint(gLeg,0x5A5BFF,0xC44DFF,(x,y)=>(x-.7)/.3*.7+(1-y)*.3);
+  const logoMat=new THREE.MeshStandardMaterial({vertexColors:true,metalness:.35,roughness:.22,emissive:0x1a2a80,emissiveIntensity:.55});
+  const logo=new THREE.Group();
+  const mark=new THREE.Group();
+  mark.add(new THREE.Mesh(gMain,logoMat),new THREE.Mesh(gLeg,logoMat));
+  mark.position.y=.62;logo.add(mark);
+  // palavra ARVANE + DIGITAL INTELLIGENCE, desenhada como na logo (A sem travessão)
+  const wc=document.createElement('canvas');wc.width=2048;wc.height=520;
+  const wtex=new THREE.CanvasTexture(wc);
+  function drawWord(){
+    const x=wc.getContext('2d'),W=wc.width;x.clearRect(0,0,W,wc.height);
+    const fs=230,base=270,sp=46;x.font=`${fs}px Michroma, "Arial Black", sans-serif`;x.textBaseline='alphabetic';
+    const letters=['Λ','R','V','Λ','N','E'];
+    const wid=l=>l==='Λ'?x.measureText('V').width:x.measureText(l).width;
+    const total=letters.reduce((s,l)=>s+wid(l),0)+sp*(letters.length-1);
+    let cx=(W-total)/2;
+    const silver=x.createLinearGradient(0,base-fs*.75,0,base);silver.addColorStop(0,'#FFFFFF');silver.addColorStop(.55,'#C9D2E3');silver.addColorStop(1,'#8E9BB5');
+    letters.forEach((l,i)=>{
+      const w=wid(l);
+      if(i===5){const g=x.createLinearGradient(cx,0,cx+w,0);g.addColorStop(0,'#3D8BFF');g.addColorStop(1,'#B04DFF');x.fillStyle=g}else x.fillStyle=silver;
+      if(l==='Λ'){const h=fs*.72,t=fs*.15;x.beginPath();x.moveTo(cx,base);x.lineTo(cx+w/2-t*.35,base-h);x.lineTo(cx+w/2+t*.35,base-h);x.lineTo(cx+w,base);x.lineTo(cx+w-t*1.05,base);x.lineTo(cx+w/2,base-h+t*1.9);x.lineTo(cx+t*1.05,base);x.closePath();x.fill()}
+      else x.fillText(l,cx,base);
+      cx+=w+sp;
+    });
+    x.font='600 62px "Instrument Sans", "Segoe UI", sans-serif';
+    const sub='DIGITAL INTELLIGENCE'.split('').join(String.fromCharCode(8202,8202,8202));
+    const sw=x.measureText(sub).width,g2=x.createLinearGradient((W-sw)/2,0,(W+sw)/2,0);
+    g2.addColorStop(0,'#35D6FF');g2.addColorStop(.55,'#3D8BFF');g2.addColorStop(1,'#C44DFF');
+    x.fillStyle=g2;x.fillText(sub,(W-sw)/2,base+150);
+    wtex.needsUpdate=true;
+  }
+  drawWord();
+  try{document.fonts.load('230px Michroma').then(drawWord);document.fonts.ready.then(drawWord)}catch(e){}
+  const word=new THREE.Mesh(new THREE.PlaneGeometry(5.6,5.6*wc.height/wc.width),new THREE.MeshBasicMaterial({map:wtex,transparent:true,depthWrite:false}));
+  word.position.set(0,-1.6,.25);logo.add(word);
+  // reflexo de luz no "chão", como na imagem da logo
+  const fc=document.createElement('canvas');fc.width=512;fc.height=64;
+  const fx=fc.getContext('2d'),fg=fx.createRadialGradient(256,32,0,256,32,256);
+  fg.addColorStop(0,'rgba(90,120,255,.7)');fg.addColorStop(.5,'rgba(140,80,255,.18)');fg.addColorStop(1,'rgba(0,0,0,0)');
+  fx.fillStyle=fg;fx.fillRect(0,0,512,64);
+  const floor=new THREE.Sprite(new THREE.SpriteMaterial({map:new THREE.CanvasTexture(fc),transparent:true,depthWrite:false}));
+  floor.scale.set(7,.9,1);floor.position.set(0,-2.55,0);logo.add(floor);
+  group.add(logo);
+  const core=logo,wire={rotation:{}}; // compatibilidade com o loop
+  // brilho neon atrás da logo
+  const gc=document.createElement('canvas');gc.width=gc.height=256;
+  const gx=gc.getContext('2d'),rg=gx.createRadialGradient(128,128,0,128,128,128);
+  rg.addColorStop(0,'rgba(61,139,255,.55)');rg.addColorStop(.45,'rgba(120,80,255,.18)');rg.addColorStop(1,'rgba(0,0,0,0)');
+  gx.fillStyle=rg;gx.fillRect(0,0,256,256);
+  const glow=new THREE.Sprite(new THREE.SpriteMaterial({map:new THREE.CanvasTexture(gc),transparent:true,depthWrite:false}));
+  glow.scale.set(9,9,1);glow.position.z=-1.2;group.add(glow);
+  // luz que varre a logo
+  const sweep=new THREE.PointLight(0xffffff,1.6,8);scene.add(sweep);
+  // anéis de partículas
+  const pts=[];const N=1800;
+  for(let i=0;i<N;i++){
+    const r=2.9+Math.random()*1.6, a=Math.random()*Math.PI*2, y=(Math.random()-.5)*.35*(r-2.4);
+    pts.push(Math.cos(a)*r,y,Math.sin(a)*r);
+  }
+  const pg=new THREE.BufferGeometry();pg.setAttribute('position',new THREE.Float32BufferAttribute(pts,3));
+  const ring=new THREE.Points(pg,new THREE.PointsMaterial({color:0xeef1f8,size:.025,transparent:true,opacity:.8}));
+  ring.rotation.x=.42;group.add(ring);
+  // satélite quente
+  const sat=new THREE.Mesh(new THREE.OctahedronGeometry(.16),new THREE.MeshBasicMaterial({color:0xb04dff}));
+  group.add(sat);
+
+  scene.add(new THREE.AmbientLight(0x6070a0,.6));
+  const l1=new THREE.PointLight(0x5b8cff,2.2,30);l1.position.set(4,3,5);scene.add(l1);
+  const l2=new THREE.PointLight(0xb04dff,1.6,30);l2.position.set(-5,-2,3);scene.add(l2);
+
+  let mx=0,my=0;
+  addEventListener('pointermove',e=>{mx=e.clientX/innerWidth-.5;my=e.clientY/innerHeight-.5});
+
+  function size(){
+    const w=canvas.clientWidth,h=canvas.clientHeight;
+    renderer.setSize(w,h,false);cam.aspect=w/h;cam.updateProjectionMatrix();
+    const narrow=w<700;
+    group.position.set(narrow?0:2.9,narrow?1.3:.1,0);
+    group.scale.setScalar(narrow?.62:.85);
+  }
+  new ResizeObserver(size).observe(canvas);size();
+
+  const clock=new THREE.Clock();
+  function tick(){
+    const t=reduce?3:clock.getElapsedTime();
+    const s=Math.min(scrollY/600,1);
+    // entrada: a logo surge girando, depois balança suavemente
+    const intro=Math.min(1,t/1.8),e=1-Math.pow(1-intro,3);
+    core.scale.setScalar(.2+.8*e);
+    // ao rolar a página a logo dá uma volta completa
+    core.rotation.y=(1-e)*-Math.PI*1.5+Math.sin(t*.6)*.3*(1-s)+s*Math.PI*2;
+    core.rotation.x=Math.sin(t*.45)*.08;
+    core.position.y=Math.sin(t*1.1)*.08;
+    sweep.position.set(Math.sin(t*.8)*3+group.position.x,1.2,2.2);
+    glow.material.opacity=.75+Math.sin(t*1.6)*.2;
+    ring.rotation.y=t*.06+s*1.2;
+    sat.position.set(Math.cos(t*.7)*3.4,Math.sin(t*.9)*.6,Math.sin(t*.7)*3.4);
+    group.rotation.x+=((my*.4)-group.rotation.x)*.04;
+    group.rotation.y+=((mx*.6)-group.rotation.y)*.04;
+    renderer.render(scene,cam);
+    if(!reduce) requestAnimationFrame(tick);
+  }
+  tick();
+})();
+
+/* ---------- História com rolagem: partículas que se transformam (Canvas 2D, funciona em qualquer navegador) ---------- */
+(function(){
+  const canvas=document.getElementById('morph');
+  const section=document.getElementById('jornada');
+  const chapWrap=section.querySelector('.chapters');
+  const chapters=[...section.querySelectorAll('.chapter')];
+  const bars=[...section.querySelectorAll('.meter b')];
+  const ctx=canvas.getContext('2d');
+  if(!ctx) return;
+  const N=2600, R=Math.random;
+
+  // 1. ideia: nuvem esférica
+  function cloud(){const a=[];for(let i=0;i<N;i++){const u=R()*2-1,t=R()*Math.PI*2,r=2.3*Math.cbrt(R());const s=Math.sqrt(1-u*u);a.push(r*s*Math.cos(t),r*u,r*s*Math.sin(t))}return a}
+  // 2. site: tela com blocos de conteúdo
+  function screen(){
+    const a=[],W=4.4,H=2.8,z=()=>(R()-.5)*.08;
+    const boxes=[[-2,1.05,4,.22],[-1.9,.45,2.2,.18],[-1.9,.15,1.6,.1],[-1.9,-.1,1.1,.22],[.5,.65,1.4,1],[-1.9,-1.15,1.15,.75],[-.6,-1.15,1.15,.75],[.7,-1.15,1.15,.75]];
+    for(let i=0;i<N;i++){
+      if(i<N*.3){const p=R()*2*(W+H);let x,y;
+        if(p<W){x=-W/2+p;y=H/2}else if(p<W+H){x=W/2;y=H/2-(p-W)}else if(p<2*W+H){x=W/2-(p-W-H);y=-H/2}else{x=-W/2;y=-H/2+(p-2*W-H)}
+        a.push(x,y,z())}
+      else{const b=boxes[i%boxes.length];a.push(b[0]+R()*b[2],b[1]-R()*b[3],z())}
+    }return a}
+  // 3. Google: pin de localização
+  function pin(){
+    const a=[];while(a.length<N*3){const x=(R()-.5)*2.8,y=R()*3.6-2.1;
+      const cy=.55,d=Math.hypot(x,y-cy);
+      const inCircle=d<1.2&&d>.46;
+      const inTip=y<cy&&y>-1.9&&Math.abs(x)<1.08*(y+1.9)/2.45&&d>.46;
+      if(inCircle||inTip)a.push(x,y,(R()-.5)*.5)}
+    return a}
+  // 4. resultado: barras crescentes + linha de tendência
+  function chart(){
+    const a=[],hs=[.7,1.2,1.7,2.5,3.4];
+    for(let i=0;i<N;i++){
+      if(i<N*.12){const t=R();a.push(-2.2+t*4.6,-1.7+Math.pow(t,1.6)*3.9+.15,0.4)}
+      else{const k=i%5,h=hs[k];a.push(-2.2+k*.95+R()*.62,-1.7+R()*h,(R()-.5)*.62)}
+    }return a}
+  const shapes=[cloud(),screen(),pin(),chart()];
+  const colors=[[140,154,184],[61,139,255],[176,77,255],[53,214,255]];
+  const lag=new Float32Array(N);for(let i=0;i<N;i++)lag[i]=R()*.35;
+
+  let W=0,H=0,dpr=1;
+  function size(){
+    dpr=Math.min(window.devicePixelRatio||1,2);
+    W=canvas.clientWidth;H=canvas.clientHeight;
+    canvas.width=Math.max(1,Math.round(W*dpr));canvas.height=Math.max(1,Math.round(H*dpr));
+  }
+  size();
+  try{new ResizeObserver(size).observe(canvas)}catch(e){addEventListener('resize',size)}
+
+  const ease=t=>t<.5?4*t*t*t:1-Math.pow(-2*t+2,3)/2;
+  function progress(){
+    const r=chapWrap.getBoundingClientRect(),vh=window.innerHeight||document.documentElement.clientHeight;
+    const p=(vh*.55-r.top)/Math.max(1,r.height-vh*.6);
+    return Math.max(0,Math.min(1,p))*3; // 0..3
+  }
+  let cur=progress();
+  function frame(t){
+    if(!W||!H){size()}
+    const target=progress();
+    cur+=(target-cur)*.09;
+    const k=Math.min(2,Math.floor(cur)),f=cur-k;
+    const A=shapes[k],B=shapes[k+1];
+    const cA=colors[k],cB=colors[k+1],ce=ease(f);
+    const col=`rgb(${cA.map((v,i)=>Math.round(v+(cB[i]-v)*ce)).join(',')})`;
+    const ry=Math.sin(t*.0004)*.45+(k===0?t*.00025*(1-f):0), rx=.18+Math.sin(t*.0003)*.08;
+    const cy=Math.cos(ry),sy=Math.sin(ry),cx=Math.cos(rx),sx=Math.sin(rx);
+    const unit=Math.min(W,H)/6.4*dpr, cam=9, ox=canvas.width/2, oy=canvas.height/2;
+    ctx.setTransform(1,0,0,1,0,0);
+    ctx.clearRect(0,0,canvas.width,canvas.height);
+    ctx.globalCompositeOperation='lighter';
+    ctx.fillStyle=col;
+    const base=Math.max(1.4,1.9*dpr);
+    for(let i=0;i<N;i++){
+      const e=ease(Math.max(0,Math.min(1,(f-lag[i])/.65)));
+      const j=i*3;
+      let x=A[j]+(B[j]-A[j])*e, y=A[j+1]+(B[j+1]-A[j+1])*e, z=A[j+2]+(B[j+2]-A[j+2])*e;
+      // rotação Y e X
+      let x1=x*cy+z*sy, z1=-x*sy+z*cy;
+      let y1=y*cx-z1*sx, z2=y*sx+z1*cx;
+      const s=cam/(cam-z2);
+      const px=ox+x1*unit*s, py=oy-y1*unit*s;
+      ctx.globalAlpha=Math.max(.25,Math.min(1,.55+z2*.18));
+      const sz=base*s;
+      ctx.fillRect(px-sz/2,py-sz/2,sz,sz);
+    }
+    ctx.globalAlpha=1;ctx.globalCompositeOperation='source-over';
+    const active=Math.min(3,Math.round(cur));
+    chapters.forEach((c,i)=>c.classList.toggle('on',i===active));
+    bars.forEach((b,i)=>b.style.transform=`scaleX(${Math.max(0,Math.min(1,cur-i))})`);
+  }
+  // roda sempre, mas só desenha quando a seção está perto da tela
+  function loop(t){
+    const r=section.getBoundingClientRect(),vh=window.innerHeight||800;
+    if(r.bottom>-200&&r.top<vh+200) frame(t||0);
+    requestAnimationFrame(loop);
+  }
+  frame(0);
+  requestAnimationFrame(loop);
+})();
+</script>
+
+</body>
+</html>
