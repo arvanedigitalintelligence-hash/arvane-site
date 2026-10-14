@@ -1,6 +1,0 @@
-# Evita conteúdo duplicado: o endereço provisório do Netlify redireciona para o domínio oficial
-[[redirects]]
-  from = "https://animated-sherbet-7089c6.netlify.app/*"
-  to = "https://arvanedigitalintelligence.com/:splat"
-  status = 301
-  force = true
