@@ -4,7 +4,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <title>ARVANE Digital Intelligence | Sites, Sistemas, Apps e Automação</title>
-<meta name="description" content="A ARVANE Digital Intelligence cria sites profissionais, sistemas sob medida, aplicativos, automação com IA no WhatsApp e presença no Google para empresas que querem crescer.">
+<meta name="description" content="A ARVANE Digital Intelligence cria sites profissionais, sistemas sob medida, aplicativos, cartões e placas NFC, automação com IA no WhatsApp e presença no Google. Indaiatuba, SP.">
 <link rel="canonical" href="https://www.arvanedigitalintelligence.com/">
 <meta property="og:type" content="website">
 <meta property="og:site_name" content="ARVANE Digital Intelligence">
@@ -125,6 +125,40 @@ section{padding-block:clamp(72px,10vw,128px)}
 }
 @media (prefers-reduced-motion:reduce){.chapter{opacity:1}}
 
+
+/* NÚMEROS */
+.stats{border-bottom:1px solid var(--line);background:var(--deep)}
+.stats .wrap{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));padding-block:44px}
+.stat{display:grid;gap:6px;padding-inline:24px;border-left:1px solid var(--line)}
+.stat:first-child{border-left:0;padding-left:0}
+.stat b{font-family:var(--f-display);font-weight:800;font-size:clamp(40px,5vw,64px);line-height:1;letter-spacing:-.03em;font-variant-numeric:tabular-nums;background:linear-gradient(90deg,var(--cyan),var(--signal) 60%,var(--ember));-webkit-background-clip:text;background-clip:text;color:transparent}
+.stat span{color:var(--fog);font-size:15px}
+@media (max-width:820px){.stats .wrap{grid-template-columns:repeat(2,minmax(0,1fr));gap:28px 0}.stat:nth-child(3){border-left:0;padding-left:0}}
+
+/* NFC */
+.nfc .wrap{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:56px;align-items:center}
+.nfc h2{font-size:clamp(32px,4.6vw,56px);font-weight:800}
+.nfc .lead{color:var(--fog);margin-top:18px;max-width:46ch}
+.uses{list-style:none;margin:28px 0 0;padding:0;display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px}
+.uses li{border:1px solid var(--line);border-radius:14px;padding:14px 16px;background:var(--deep);display:grid;gap:2px}
+.uses li b{font-size:15.5px}.uses li span{color:var(--fog);font-size:14px}
+.tapstage{position:relative;aspect-ratio:1/1;max-width:100%;border-radius:28px;border:1px solid var(--line);background:radial-gradient(70% 70% at 50% 45%,#16285C 0%,var(--ink) 75%);overflow:hidden}
+.ncard{position:absolute;left:12%;bottom:16%;width:56%;aspect-ratio:1.586/1;border-radius:16px;background:linear-gradient(135deg,#0E1A3A,#070B16);border:1px solid #2A3A66;box-shadow:0 20px 50px rgba(0,0,0,.5);padding:7%;display:grid;align-content:space-between}
+.ncard svg{width:22%;height:auto}
+.ncard small{font-family:Michroma,var(--f-display);font-size:clamp(9px,1.1vw,13px);letter-spacing:.2em;color:var(--paper)}
+.ncard .chip{position:absolute;right:8%;top:12%;width:16%;aspect-ratio:1;border-radius:50%;border:2px solid var(--cyan);opacity:.8}
+.nphone{position:absolute;right:12%;top:10%;width:30%;aspect-ratio:9/19;border-radius:22px;background:#0A0F1E;border:2px solid #34446E;box-shadow:0 20px 50px rgba(0,0,0,.55);animation:tap 3.6s cubic-bezier(.6,0,.3,1) infinite;padding:8% 7%;display:grid;align-content:start;gap:8%}
+.nphone i{display:block;height:7%;border-radius:4px;background:#1C2950}
+.nphone i:first-child{height:22%;background:linear-gradient(135deg,var(--signal),var(--ember));opacity:0;animation:pop 3.6s infinite}
+.waves{position:absolute;left:48%;top:46%;width:30%;aspect-ratio:1;transform:translate(-50%,-50%)}
+.waves span{position:absolute;inset:0;border-radius:50%;border:2px solid var(--cyan);opacity:0;animation:wave 3.6s infinite}
+.waves span:nth-child(2){animation-delay:.25s}.waves span:nth-child(3){animation-delay:.5s}
+@keyframes tap{0%,15%{transform:translate(0,0) rotate(8deg)}38%,62%{transform:translate(-62%,48%) rotate(-4deg)}85%,100%{transform:translate(0,0) rotate(8deg)}}
+@keyframes wave{0%,36%{opacity:0;transform:scale(.4)}46%{opacity:.9}70%{opacity:0;transform:scale(1.5)}100%{opacity:0}}
+@keyframes pop{0%,44%{opacity:0}54%,90%{opacity:1}100%{opacity:0}}
+@media (max-width:820px){.nfc .wrap{grid-template-columns:1fr}.uses{grid-template-columns:1fr}}
+@media (prefers-reduced-motion:reduce){.nphone{animation:none;transform:translate(-62%,48%)}.nphone i:first-child{animation:none;opacity:1}.waves span{animation:none}}
+
 /* VÍDEOS */
 .videos{background:var(--deep);border-block:1px solid var(--line)}
 .vgrid{display:grid;grid-template-columns:1fr 1fr 1.1fr;gap:20px;align-items:start}
@@ -202,7 +236,7 @@ footer .copy{grid-column:1/-1;border-top:1px solid var(--line);padding-top:20px;
   <div class="wrap">
     <a class="brand" href="#topo"><svg class="mark" viewBox="0 0 100 100" aria-hidden="true"><defs><linearGradient id="ga" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#45C8FF"/><stop offset="1" stop-color="#2D55FF"/></linearGradient><linearGradient id="gb" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#5A5BFF"/><stop offset="1" stop-color="#C44DFF"/></linearGradient></defs><path fill="url(#ga)" fill-rule="evenodd" d="M0 100 L39.7 0 L54 0 L81 53.5 L19 100 Z M57.1 20.5 L22 82 L68 52 Z"/><polygon fill="url(#gb)" points="63.5,74.8 82.5,60.5 100,100 84,100 76.5,76.5"/></svg><span>ARVANE<small>DIGITAL INTELLIGENCE</small></span></a>
     <div class="links">
-      <a href="#servicos">Serviços</a><a href="#jornada">Jornada</a><a href="#videos">Vídeos</a><a href="#projetos">Projetos</a><a href="#processo">Como trabalhamos</a>
+      <a href="#servicos">Serviços</a><a href="#nfc">NFC</a><a href="#jornada">Jornada</a><a href="#videos">Vídeos</a><a href="#projetos">Projetos</a><a href="#processo">Como trabalhamos</a>
     </div>
     <a class="btn primary sm" href="https://wa.me/5519991826697?text=Ol%C3%A1%2C%20vim%20pelo%20site%20da%20ARVANE%20Digital%20Intelligence." target="_blank" rel="noopener">Falar com a Arvane</a>
   </div>
@@ -223,6 +257,15 @@ footer .copy{grid-column:1/-1;border-top:1px solid var(--line);padding-top:20px;
     </div>
   </div>
 </header>
+
+<section class="stats" aria-label="Números da Arvane" style="padding-block:0">
+  <div class="wrap">
+    <div class="stat"><b data-n="100">100+</b><span>sites entregues</span></div>
+    <div class="stat"><b data-n="50">50+</b><span>sistemas instalados e gerenciados</span></div>
+    <div class="stat"><b data-n="10">10+</b><span>apps rodando</span></div>
+    <div class="stat"><b>NFC</b><span>cartões e placas inteligentes</span></div>
+  </div>
+</section>
 
 <main>
 <section id="por-que">
@@ -254,6 +297,28 @@ footer .copy{grid-column:1/-1;border-top:1px solid var(--line);padding-top:20px;
       <article class="svc"><span class="tag">SEO</span><h3>Palavras-chave</h3><p>Análise estratégica para máxima relevância no seu nicho e impulsionamento nas buscas.</p></article>
       <article class="svc"><span class="tag">TRÁFEGO</span><h3>Suporte em tráfego</h3><p>Consultoria tática para guiar a visibilidade da sua marca e o retorno dos anúncios.</p></article>
       <article class="svc"><span class="tag">CÓDIGO</span><h3>Implementações técnicas</h3><p>Integrações e códigos personalizados para alto desempenho do seu negócio.</p></article>
+    </div>
+  </div>
+</section>
+
+<section id="nfc" class="nfc" style="padding-top:0">
+  <div class="wrap">
+    <div class="reveal">
+      <p class="eyebrow">Tecnologia NFC</p>
+      <h2 style="margin-top:14px">Aproximou o celular, o cliente chegou.</h2>
+      <p class="lead">Criamos cartões, placas e displays com NFC que abrem na hora o que você quiser no celular do cliente, sem app e sem digitar nada. Basta encostar.</p>
+      <ul class="uses">
+        <li><b>Cartão de visita digital</b><span>Contato, WhatsApp e redes em um toque.</span></li>
+        <li><b>Avaliações no Google</b><span>Placa no balcão que leva direto para avaliar.</span></li>
+        <li><b>Cardápio e catálogo</b><span>Displays de mesa para restaurantes e lojas.</span></li>
+        <li><b>Instagram e Wi‑Fi</b><span>Mais seguidores e acesso fácil para clientes.</span></li>
+      </ul>
+      <div class="cta-row"><a class="btn primary" href="https://wa.me/5519991826697?text=Ol%C3%A1%2C%20quero%20saber%20mais%20sobre%20os%20produtos%20NFC%20da%20Arvane." target="_blank" rel="noopener">Quero NFC na minha empresa →</a></div>
+    </div>
+    <div class="tapstage reveal" aria-hidden="true">
+      <div class="ncard"><span class="chip"></span><svg viewBox="0 0 100 100" aria-hidden="true"><defs><linearGradient id="nga" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#45C8FF"/><stop offset="1" stop-color="#2D55FF"/></linearGradient><linearGradient id="ngb" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#5A5BFF"/><stop offset="1" stop-color="#C44DFF"/></linearGradient></defs><path fill="url(#nga)" fill-rule="evenodd" d="M0 100 L39.7 0 L54 0 L81 53.5 L19 100 Z M57.1 20.5 L22 82 L68 52 Z"/><polygon fill="url(#ngb)" points="63.5,74.8 82.5,60.5 100,100 84,100 76.5,76.5"/></svg><small>ARVANE</small></div>
+      <div class="waves"><span></span><span></span><span></span></div>
+      <div class="nphone"><i></i><i></i><i></i><i></i></div>
     </div>
   </div>
 </section>
@@ -400,6 +465,19 @@ CASES.forEach(([t,d,h,feat],i)=>{
   const b=document.createElement('div');b.innerHTML=`<h3>${t}</h3><p>${d}</p>`;a.appendChild(b);
   wk.appendChild(a);
 });
+
+/* ---------- Contagem dos números ---------- */
+try{
+  const nums=document.querySelectorAll('.stat b[data-n]');
+  const io2=new IntersectionObserver(es=>es.forEach(e=>{
+    if(!e.isIntersecting)return;io2.unobserve(e.target);
+    if(matchMedia('(prefers-reduced-motion: reduce)').matches)return;
+    const el=e.target,n=+el.dataset.n,t0=performance.now();
+    const step=t=>{const k=Math.min(1,(t-t0)/1400),v=Math.round(n*(1-Math.pow(1-k,3)));el.textContent=v+'+';if(k<1)requestAnimationFrame(step)};
+    requestAnimationFrame(step);
+  }),{threshold:.6});
+  nums.forEach(n=>io2.observe(n));
+}catch(e){}
 
 /* ---------- Aparecimento suave ---------- */
 try{
